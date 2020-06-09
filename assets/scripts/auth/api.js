@@ -41,8 +41,8 @@ const changePassword = function (formData) {
     },
     data: {
       passwords: {
-        old: formData.passwords.oldpw,
-        new: formData.passwords.newpw
+        old: formData.passwords.old,
+        new: formData.passwords.new
       }
     }
   })
