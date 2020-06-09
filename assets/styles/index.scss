@@ -1,1 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: red
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: 2px solid white;
+}
