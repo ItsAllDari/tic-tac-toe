@@ -1,5 +1,6 @@
 'use strict'
 const config = require('./../config')
+const store = require('./../store')
 
 const newUser = function (formData) {
   console.log(formData)
@@ -35,6 +36,9 @@ const changePassword = function (formData) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: {
       passwords: {
         old: formData.passwords.oldpw,
@@ -44,17 +48,12 @@ const changePassword = function (formData) {
   })
 }
 
-const userSignOut = function (data) {
-  console.log(data)
-
+const userSignOut = function () {
   return $.ajax({
-    url: config.apiUrl + '/sign-in',
+    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
-    data: {
-      credentials: {
-        email: data.credentials.email,
-        password: data.credentials.password
-      }
+    headers: {
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
