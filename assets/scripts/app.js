@@ -14,4 +14,5 @@ $(() => {
   $('.hide').hide()
   $('#new-game').hide()
   $('.box').hide()
+  $('#new-game').on('submit', authEvents.onNewGame)
 })
