@@ -1,6 +1,6 @@
 'use strict'
-const api = require('./api')
-const ui = require('./ui')
+const api = require('./api-game')
+const ui = require('./ui-game')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
 const onGetGame = function (event) {
@@ -18,9 +18,15 @@ const onNewGame = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
+  console.log(event)
+  console.log(data)
+
   api.newGame(data)
     .then(ui.newSuccess)
     .catch(ui.newFailure)
+
+  // $('.board').empty()
+  // $('#result').empty()
 }
 
 const onShowGame = function (event) {
