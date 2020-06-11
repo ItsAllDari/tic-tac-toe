@@ -17,4 +17,5 @@ $(() => {
   $('#new-game').hide()
   $('.box').hide()
   $('#new-game').on('submit', gameEvents.onNewGame)
+  $('#delete-game').hide()
 })
