@@ -20,6 +20,9 @@ const newGameSuccess = function (data) {
   $('#message').show().removeClass().addClass('success')
   store.user = data.user
   console.log('newGameSuccess')
+  $('.board').show()
+  $('.hide').hide()
+  $('#delete-game').show()
 }
 const newGameFailure = function () {
   $('form').trigger('reset')
