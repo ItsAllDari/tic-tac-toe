@@ -21,7 +21,18 @@ form {
 }
 
 .box {
-  height: 200px;
-  width: 200px;
-  border: 2px solid white;
+  // height: 200px;
+  // width: 200px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  min-height: calc(100% / 3);
+}
+
+.container {
+  height: 100vh;
+}
+
+.board {
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
 }
