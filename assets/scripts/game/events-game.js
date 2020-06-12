@@ -3,8 +3,9 @@ const api = require('./api-game')
 const ui = require('./ui-game')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
-let player = 'X'
-let opponent = 'O'
+let currentPlayer = '✕'
+// const player = 'X'
+// let opponent = 'O'
 
 const onGetGame = function (event) {
   event.preventDefault()
@@ -26,9 +27,6 @@ const onNewGame = function (event) {
   api.newGame(data)
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
-
-  // $('.board').empty()
-  // $('#result').empty()
 }
 
 const onShowGame = function (event) {
@@ -62,14 +60,20 @@ const onDeleteGame = function (event) {
 }
 
 const onClick = function (event) {
-  if (event.target.box === '') {
-    console.log()
-  }
+  console.log('click')
+
+  const box = $(event.target)
+
+  box.css('background', 'transparent').text(currentPlayer)
+
+  currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
 }
+
 module.exports = {
   onGetGame: onGetGame,
   onNewGame: onNewGame,
   onShowGame: onShowGame,
   onUpdateGame: onUpdateGame,
-  onDeleteGame: onDeleteGame
+  onDeleteGame: onDeleteGame,
+  onClick: onClick
 }
