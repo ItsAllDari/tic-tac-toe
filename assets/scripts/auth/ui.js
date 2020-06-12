@@ -22,7 +22,6 @@ const signInSuccess = function (data) {
   $('#new-game').show()
   $('.hide').show()
   $('.show').hide()
-  $('.box').show()
 }
 const signInFailure = function () {
   $('form').trigger('reset')
