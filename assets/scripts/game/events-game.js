@@ -2,10 +2,9 @@
 const api = require('./api-game')
 const ui = require('./ui-game')
 const getFormFields = require('../../../lib/get-form-fields.js')
+const store = require('./../store')
 
 let currentPlayer = '✕'
-// const player = 'X'
-// let opponent = 'O'
 
 const onGetGame = function (event) {
   event.preventDefault()
@@ -60,13 +59,28 @@ const onDeleteGame = function (event) {
 }
 
 const onClick = function (event) {
-  console.log('click')
-
+  const board = $('.box')
+  const index = event.target.dataset.index
+  store.game.cells[index] = currentPlayer
   const box = $(event.target)
+  if (box.text()) {
+    $('#message').text('Space is taken')
+  } else {
+    box.css('background', 'transparent').text(currentPlayer)
+    currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
+  }
+  checkWinner(board)
+}
 
-  box.css('background', 'transparent').text(currentPlayer)
-
-  currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
+const checkWinner = function (board) {
+  if (board[0].innerHTML === board[1].innerHTML && board[1].innerHTML === board[2].innerHTML) {
+    console.log('Winner is ', board[0].innerHTML)
+    store.game.over = true
+  }
+  if (board[0].innerHTML === board[3].innerHTML && board[3].innerHTML === board[6].innerHTML) {
+    console.log('Winner is ', board[0].innerHTML)
+    store.game.over = true
+  }
 }
 
 module.exports = {
