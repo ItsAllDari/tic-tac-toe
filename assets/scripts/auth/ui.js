@@ -16,10 +16,11 @@ const newFailure = function () {
 
 const signInSuccess = function (data) {
   $('form').trigger('reset')
-  $('#message').text("You've signed in! Click new game to begin.")
+  $('#message').text("You've signed in! Click new game to begin or get game to view previous results.")
   $('#message').show().removeClass().addClass('success')
   store.user = data.user
   $('#new-game').show()
+  $('#get-game').show()
   $('.hide').show()
   $('.show').hide()
 }
