@@ -19,6 +19,8 @@ $(() => {
   $('#new-game').on('submit', gameEvents.onNewGame)
   $('#reset-game').hide()
   $('.box').on('click', gameEvents.onClick)
+  $('#get-game').hide()
+  $('#get-game').on('submit', gameEvents.onGetGame)
   // const onBoxClick = (event) => {
   //   console.log('click')
   // }
