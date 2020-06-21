@@ -18,11 +18,12 @@ const newGameSuccess = function (data) {
   $('form').trigger('reset')
   $('#message').text('Starting new game. Please click a box to select a space.')
   $('#message').show().removeClass().addClass('success')
-  store.user = data.user
+  store.game = data.game
   console.log('newGameSuccess')
   $('.box').show()
   $('.hide').hide()
   $('#reset-game').show()
+  $('#get-game').show()
 }
 const newGameFailure = function () {
   $('form').trigger('reset')
