@@ -45,13 +45,7 @@ const updateGame = function (data) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    game: {
-      cell: {
-        index: 0,
-        value: 'x'
-      },
-      over: false
-    }
+    game: data
   })
 }
 
