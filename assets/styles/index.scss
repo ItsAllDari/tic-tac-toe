@@ -1,23 +1,34 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: red
+  background-image: url("https://wallpaperset.com/w/full/2/6/f/441824.jpg");
+  background-image {
+    opacity: 50%;
+  }
 }
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 h4 {
   text-align: center;
+  color: white;
 }
 
 h3 {
   text-align: center;
+  color: white;
 }
 
 form {
   text-align: center;
+}
+
+.success {
+  text-align: center;
+  color: white;
 }
 
 .box {
