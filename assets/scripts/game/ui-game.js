@@ -21,6 +21,8 @@ const newGameSuccess = function (data) {
   store.game = data.game
   console.log('newGameSuccess')
   $('.box').show()
+  $('.box').text('')
+  $('.box').css('background-color', 'black')
   $('.hide').hide()
   $('#reset-game').show()
   $('#get-game').show()
