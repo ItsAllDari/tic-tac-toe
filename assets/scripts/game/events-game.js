@@ -75,6 +75,7 @@ const onClick = function (event) {
 const checkWinner = function (board) {
   if (board[0].innerHTML === board[1].innerHTML && board[1].innerHTML === board[2].innerHTML) {
     console.log('Winner is ', board[0].innerHTML)
+    $('#message').text('Game Over! Winner is: ' + board[0].innerHTML)
     store.game.over = true
   }
   if (board[0].innerHTML === board[3].innerHTML && board[3].innerHTML === board[6].innerHTML) {
