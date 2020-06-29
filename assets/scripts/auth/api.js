@@ -19,7 +19,6 @@ const newUser = function (formData) {
 
 const userSignIn = function (data) {
   console.log(data)
-
   return $.ajax({
     url: config.apiUrl + '/sign-in/',
     method: 'POST',

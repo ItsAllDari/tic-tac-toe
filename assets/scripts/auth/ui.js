@@ -22,11 +22,12 @@ const signInSuccess = function (data) {
   $('#new-game').show()
   $('#get-game').show()
   $('.hide').show()
+  $('#sign-out').show()
   $('.show').hide()
 }
 const signInFailure = function () {
   $('form').trigger('reset')
-  $('#message').text('Sign in failed')
+  $('#message').text('Sign in failed. Email or password is incorrect.')
   $('#message').show().removeClass().addClass('failed')
 }
 
@@ -52,7 +53,6 @@ const changePasswordSuccess = function (data) {
   $('#message').text('Password has been updated')
   $('#message').show().removeClass().addClass('success')
   console.log('Password has been updated')
-  // store.user = data.user
 }
 
 const changePasswordFailure = function () {
