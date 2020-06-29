@@ -1,25 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url("https://wallpaperset.com/w/full/2/6/f/441824.jpg");
-  background-image {
-    opacity: 50%;
-  }
+  background-image: url('https://wallpapercave.com/wp/wp5539373.jpg');
+  background-position: top;
+  font-family: 'Aldrich';
 }
 
 h1 {
   text-align: center;
   color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #cc0066, 0 0 20px #cc0066, 0 0 25px #cc0066, 0 0 30px #cc0066, 0 0 35px #cc0066;
 }
 
 h4 {
   text-align: center;
   color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #cc0099, 0 0 20px #cc0099, 0 0 25px #cc0099, 0 0 30px #cc0099, 0 0 35px #cc0099;
 }
 
 h3 {
   text-align: center;
-  color: white;
+  color: black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
 }
 
 form {
@@ -28,7 +30,14 @@ form {
 
 .success {
   text-align: center;
-  color: white;
+  color: black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
+}
+
+.failed {
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
 }
 
 .box {
