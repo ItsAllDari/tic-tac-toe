@@ -18,7 +18,6 @@ $(() => {
   $('#new-game').hide()
   $('.box').hide()
   $('#new-game').on('submit', gameEvents.onNewGame)
-  $('#quit-game').hide()
   $('.box').on('click', gameEvents.onClick)
   $('#get-game').hide()
   $('#get-game').on('submit', gameEvents.onGetGame)
