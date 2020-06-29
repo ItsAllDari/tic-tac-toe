@@ -4,7 +4,7 @@ const store = require('./../store')
 const newGame = function (data) {
   console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/games/',
+    url: config.apiUrl + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -13,10 +13,10 @@ const newGame = function (data) {
   })
 }
 
-const getGame = function (formData) {
-  console.log(formData)
+const getGame = function (data) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/games/:over?',
+    url: config.apiUrl + '/games/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -37,15 +37,21 @@ const showGame = function (data) {
   })
 }
 
-const updateGame = function (data) {
-  console.log(data)
+const updateGame = function (index, value, over) {
+  const board = $('.box')
   return $.ajax({
-    url: config.apiUrl + '/games/:id',
+    url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    game: data
+    data: {
+      'game': {
+        'index': store.game.cells[index],
+        'value': board[index].innerHTML
+      },
+      'over': false
+    }
   })
 }
 

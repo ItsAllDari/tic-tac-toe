@@ -3,7 +3,7 @@ const store = require('./../store')
 
 const getSuccess = function (data) {
   $('form').trigger('reset')
-  $('#message').text('You have played ' + ' of games')
+  $('#message').text('You have played ' + data.game + ' games')
   $('#message').show().removeClass().addClass('success')
   console.log('getSuccess')
 }
@@ -16,15 +16,13 @@ const getFailure = function () {
 
 const newGameSuccess = function (data) {
   $('form').trigger('reset')
-  $('#message').text('Starting new game. Please click a box to select a space.')
+  $('#message').text('Starting new game. Click a box to select a space.')
   $('#message').show().removeClass().addClass('success')
   store.game = data.game
   console.log('newGameSuccess')
   $('.box').show()
-  $('.box').text('')
-  $('.box').css('background-color', 'black')
   $('.hide').hide()
-  $('#reset-game').show()
+  $('#quit-game').show()
   $('#get-game').show()
 }
 const newGameFailure = function () {
