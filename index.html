@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
       <title>Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,8 +13,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Tic Tac Toe</h1>
-      <h4>The classic game is back and better than ever</h4>
+      <h1><b>Tic Tac Toe</b></h1>
+      <h4><em>The classic game is back and better than ever</em></h4>
       <p id='message'></p>
       <section>
         <h3 class="show">Sign Up</h3>
@@ -40,12 +41,21 @@
       <br>
       <section>
         <h3 class="hide">Sign Out</h3>
-        <div class="hide">
+        <div class="sign-out">
         <form id="sign-out">
           <button type="submit">Sign Out</button>
         </form>
       </div>
       </section>
+      <br>
+      <h3 class="hide">Start Game</h3>
+      <form id='new-game'>
+        <button type='submit'>New Game</button>
+      </form>
+      <br>
+      <form action="" id='get-game'>
+        <button type='submit'>Get Game</button>
+      </form>
       <br>
       <section>
         <h3 class="hide">Change Password</h3>
@@ -57,20 +67,6 @@
           </form>
         </div>
       </section>
-      <br>
-      <form id='new-game'>
-        <button type='submit'>New Game</button>
-      </form>
-      <br>
-      <form id='get-game'>
-        <button type='submit'>Get Game</button>
-      </form>
-      <form id='reset-game'>
-        <button type='submit'>Reset Game</button>
-      </form>
-      <br>
-      <div data-cell-index='0'>
-      </div>
       <br>
       <section class='container'>
         <div class="row h-100 board">
