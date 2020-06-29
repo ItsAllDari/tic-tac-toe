@@ -3,6 +3,6 @@ curl "https://tic-tac-toe-wdi.herokuapp.com/games" \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
-  --data '{}'
+  --data {}
 
 echo
