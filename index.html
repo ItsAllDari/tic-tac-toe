@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1><b>Tic Tac Toe</b></h1>
+      <h4><em>The classic game is back and better than ever</em></h4>
+      <p id='message'></p>
+      <section>
+        <h3 class="show">Sign Up</h3>
+        <div class="show">
+        <form id="sign-up">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input placeholder="Enter password" type="text" name="credentials[password]">
+          <input placeholder="Re-enter password" type="text" name="credentials[password_confirmation]">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      </section>
+      <br>
+      <section>
+        <h3 class="show">Sign In</h3>
+        <div class="show">
+        <form id="sign-in">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input placeholder="Enter password" type="text" name="credentials[password]">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      </section>
+      <br>
+      <section>
+        <h3 class="hide">Sign Out</h3>
+        <div class="sign-out">
+        <form id="sign-out">
+          <button type="submit">Sign Out</button>
+        </form>
+      </div>
+      </section>
+      <br>
+      <h3 class="hide">Start Game</h3>
+      <form id='new-game'>
+        <button type='submit'>New Game</button>
+      </form>
+      <br>
+      <form action="" id='get-game'>
+        <button type='submit'>Get Game</button>
+      </form>
+      <br>
+      <section>
+        <h3 class="hide">Change Password</h3>
+        <div class="hide">
+          <form id="change-password">
+            <input placeholder="Old Password" type="text" name="passwords[old]">
+            <input placeholder="New Password" type="text" name="passwords[new]">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <br>
+      <section class='container'>
+        <div class="row h-100 board">
+        <div class="col-4 box" data-index="0"></div>
+        <div class="col-4 box" data-index="1"></div>
+        <div class="col-4 box" data-index="2"></div>
+        <div class="col-4 box" data-index="3"></div>
+        <div class="col-4 box" data-index="4"></div>
+        <div class="col-4 box" data-index="5"></div>
+        <div class="col-4 box" data-index="6"></div>
+        <div class="col-4 box" data-index="7"></div>
+        <div class="col-4 box" data-index="8"></div>
+      </div>
+    </section>
+    </body>
+</html>
